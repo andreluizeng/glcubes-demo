@@ -1,0 +1,34 @@
+INSTALATION:
+------------
+
+Copy the content in /bin folder to your rootfs folder, make sure to have the GPU libraries and driver correctly installed.
+
+CROSS-COMPILING:
+------------
+
+1 - Open the ../src/makefile
+2 - change the rootfs path
+3 - apply the make command on root folder
+
+
+THE DEMO:
+------------
+
+This demos shows a simple opengl es 2.0 usage (10 cubes bouncing around the screen) texturized with data from bitmap files.
+
+
+TROUBLESHOTS
+------------
+
+Make sure to have the images folder in the same folder as the binary. Otherwise errors will occurs. 
+
+
+AUTHOR:
+--------
+
+Andre Silva
+andreluizeng@yahoo.com.br
+andre.silva@freescale.com
+
+
+
