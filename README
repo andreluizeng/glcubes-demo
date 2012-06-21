@@ -1,7 +1,7 @@
 INSTALATION:
 ------------
 
-Copy the content in /bin folder to your rootfs folder, make sure to have the GPU libraries and driver correctly installed.
+Copy the content in /bin to your rootfs folder, make sure to have the GPU libraries and driver correctly installed.
 
 CROSS-COMPILING:
 ------------
@@ -20,7 +20,7 @@ This demos shows a simple opengl es 2.0 usage (10 cubes bouncing around the scre
 TROUBLESHOTS
 ------------
 
-Make sure to have the images folder in the same folder as the binary. Otherwise errors will occurs. 
+Make sure to have the images in the same folder as the binary. Otherwise errors will occur. 
 
 
 AUTHOR:
