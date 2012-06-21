@@ -19,6 +19,12 @@
  ***************************************************************************/
 
 #include <iostream>
+#include <unistd.h>
+#include <fcntl.h>
+#include <math.h>
+#include <sys/time.h>
+#include <sys/ioctl.h>
+
 #include "glutils.h"
 #include "glcube.h"
 
@@ -38,13 +44,18 @@ GLCube *cube10 = new GLCube;
 float matProj[16] = {0};
 float matModel[9] = {0};
 
-void Render 		(void);
-void CalcCubePos 	(float *xpos, float *ypos, float *zpos, float *speedx, float *speedy, float *speedz, int *xflag, int *yflag, int *zflag);
+void 		Render 		(void);
+void 		CalcCubePos 	(float *xpos, float *ypos, float *zpos, float *speedx, float *speedy, float *speedz, int *xflag, int *yflag, int *zflag);
+unsigned long 	GetTime		(void);
 
 int main (int argc, char **argv)
 {
 	int w;
 	int h;
+	
+	unsigned int    frame_count = 0;
+	unsigned int    frames_per_second = 0;	
+	unsigned int    time_previous_second = GetTime();
 	
 	char *cube1data1;
 	char *cube1data2;
@@ -407,6 +418,20 @@ int main (int argc, char **argv)
 	while (!window->Kbhit ())
 	{
 		Render ();
+
+		// Measure the frame rate.
+		unsigned int time = GetTime();
+		frame_count++;
+
+		if ((time - time_previous_second) > 1000)   // Has a one second interval passed?
+		{
+			time_previous_second = time;
+			frames_per_second = frame_count;
+			frame_count = 0;
+
+			printf("\nFrame Rate: %d FPS", frames_per_second);
+		}
+
 	}
 		
 	window->GLEnd();
@@ -779,3 +804,10 @@ void CalcCubePos (float *xpos, float *ypos, float *zpos, float *speedx, float *s
 	if (*speedz >= 0.1) *speedz-=0.01;
 }
 
+unsigned long GetTime(void)
+{
+	timeval tv;
+	gettimeofday(&tv, NULL);
+	unsigned long sec = tv.tv_sec;
+	return (unsigned long)((sec * (unsigned long)1000) + (tv.tv_usec / 1000.0));
+}
