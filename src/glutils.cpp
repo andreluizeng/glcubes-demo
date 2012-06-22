@@ -51,33 +51,74 @@ bool GLUtils::GLInit (void)
 	EGLint numconfigs;
 
 	EGLint ContextAttribList[] =	{EGL_CONTEXT_CLIENT_VERSION, 2,	EGL_NONE};
-
-
-	// Initialize Display - Get the default display.
-	egldisplay = eglGetDisplay (EGL_DEFAULT_DISPLAY);
-	eglInitialize (egldisplay, NULL, NULL);
-	//printf ("\neglGetDisplay\n");
-	assert (eglGetError () == EGL_SUCCESS);
-
 	
-	//Initialize EGL.
-	eglInitialize(egldisplay, NULL, NULL);
-	//printf ("\neglInitialize\n");
-	assert (eglGetError () == EGL_SUCCESS);
+	#ifdef EGL_USE_X11
+		printf("XOpenDisplay \n");
+		display = XOpenDisplay(NULL);
+		assert(display != NULL);
+		
+		int screen;
+		printf("DefaultScreen [");
+		screen = DefaultScreen(display);
+		printf("%d]\n", screen);
 
-	// EGL Surface Config
-	eglChooseConfig (egldisplay, s_configAttribs, &eglconfig, 1, &numconfigs);
-	//printf ("\neglChooseConfig\n");
-	assert (eglGetError () == EGL_SUCCESS);
-	assert (numconfigs == 1);
-
-	//You must pass in the file system handle to the linux framebuffer when creating a window
-	eglsurface = eglCreateWindowSurface (egldisplay, eglconfig, open("/dev/fb0", O_RDWR), NULL);
-	//printf ("\neglCreateWindowSurface\n");
-	assert (eglGetError () == EGL_SUCCESS);
+		Window window, rootwindow; 
+		printf("RootWindow \n");
+		rootwindow = RootWindow(display,screen); 
 
 
-	eglBindAPI (EGL_OPENGL_ES_API);
+		printf("eglGetDisplay (%d)\n", (int)display);
+		egldisplay = eglGetDisplay ( display);
+		assert(eglGetError() == EGL_SUCCESS);
+
+		printf("Disp = %d \n",(int) egldisplay);
+
+		printf("eglInitialize \n");
+		eglInitialize(egldisplay, NULL, NULL);
+		assert(eglGetError() == EGL_SUCCESS);
+
+		printf("eglBindAPI \n");
+		eglBindAPI(EGL_OPENGL_ES_API);
+
+		printf("eglChooseConfig \n");
+		eglChooseConfig(egldisplay, s_configAttribs, &eglconfig, 1, &numconfigs);
+		assert(eglGetError() == EGL_SUCCESS);
+
+		assert(numconfigs == 1);
+
+		printf("XCreateSimpleWindow \n");
+		window = XCreateSimpleWindow(display, rootwindow, 0, 0, 400, 533, 0, 0, WhitePixel (display, screen));
+
+		XMapWindow(display, window);
+
+		printf("*eglCreateWindowSurface \n");
+		eglsurface = eglCreateWindowSurface(egldisplay, eglconfig, window, NULL);
+		assert(eglGetError() == EGL_SUCCESS);
+	#else
+
+		// Initialize Display - Get the default display.
+		egldisplay = eglGetDisplay (EGL_DEFAULT_DISPLAY);
+	
+		//Initialize EGL.
+		eglInitialize(egldisplay, NULL, NULL);
+		//printf ("\neglInitialize\n");
+		assert (eglGetError () == EGL_SUCCESS);
+
+		// EGL Surface Config
+		eglChooseConfig (egldisplay, s_configAttribs, &eglconfig, 1, &numconfigs);
+		//printf ("\neglChooseConfig\n");
+		assert (eglGetError () == EGL_SUCCESS);
+		assert (numconfigs == 1);
+
+		//You must pass in the file system handle to the linux framebuffer when creating a window
+		eglsurface = eglCreateWindowSurface (egldisplay, eglconfig, open("/dev/fb0", O_RDWR), NULL);
+		//printf ("\neglCreateWindowSurface\n");
+		assert (eglGetError () == EGL_SUCCESS);
+		
+		eglBindAPI (EGL_OPENGL_ES_API);
+
+	#endif
+	
 
 	// Create the EGL graphic Context
 	EGLContext eglcontext = eglCreateContext (egldisplay, eglconfig, EGL_NO_CONTEXT, ContextAttribList);
@@ -108,6 +149,11 @@ void GLUtils::GLEnd (void)
 	eglMakeCurrent(egldisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);
 	eglTerminate(egldisplay);
 	eglReleaseThread ();
+	
+	#ifdef EGL_USE_X11	
+		XCloseDisplay(display);
+	#endif
+
 	
 	return;
 }

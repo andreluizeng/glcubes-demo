@@ -128,7 +128,7 @@ int main (int argc, char **argv)
 	char *cube10data6;
 
 
-		// Initializate OGLES2
+	// Initializate OGLES2
 	printf ("\nInitializing OGLES2...");
 	window->GLInit ();
 	printf ("OK\n");
@@ -184,220 +184,220 @@ int main (int argc, char **argv)
 	printf ("OK\n");
 
 	printf ("\nLoading Cube1's texture...");
-	cube1->CubeLoadTextureBMP((char *)"angelina/angelina1.bmp", &w, &h, &cube1data1);
+	cube1->CubeLoadTextureBMP((char *)"images/angelina/angelina1.bmp", &w, &h, &cube1data1);
 	cube1->CubeSetFaceTexBuf(FRONT_FACE, cube1data1, w, h);
 
-	cube1->CubeLoadTextureBMP((char *)"angelina/angelina2.bmp", &w, &h, &cube1data2);
+	cube1->CubeLoadTextureBMP((char *)"images/angelina/angelina2.bmp", &w, &h, &cube1data2);
 	cube1->CubeSetFaceTexBuf(BACK_FACE, cube1data2, w, h);
 	
-	cube1->CubeLoadTextureBMP((char *)"angelina/angelina3.bmp", &w, &h, &cube1data3);
+	cube1->CubeLoadTextureBMP((char *)"images/angelina/angelina3.bmp", &w, &h, &cube1data3);
 	cube1->CubeSetFaceTexBuf(RIGHT_FACE, cube1data3, w, h);
 	
-	cube1->CubeLoadTextureBMP((char *)"angelina/angelina4.bmp", &w, &h, &cube1data4);
+	cube1->CubeLoadTextureBMP((char *)"images/angelina/angelina4.bmp", &w, &h, &cube1data4);
 	cube1->CubeSetFaceTexBuf(LEFT_FACE, cube1data4, w, h);
 	
-	cube1->CubeLoadTextureBMP((char *)"angelina/angelina5.bmp", &w, &h, &cube1data5);
+	cube1->CubeLoadTextureBMP((char *)"images/angelina/angelina5.bmp", &w, &h, &cube1data5);
 	cube1->CubeSetFaceTexBuf(TOP_FACE, cube1data5, w, h);
 	
-	cube1->CubeLoadTextureBMP((char *)"angelina/angelina6.bmp", &w, &h, &cube1data6);
+	cube1->CubeLoadTextureBMP((char *)"images/angelina/angelina6.bmp", &w, &h, &cube1data6);
 	cube1->CubeSetFaceTexBuf(BOTTOM_FACE, cube1data6, w, h);
 
 	printf ("OK\n");
 	
 
 	printf ("\nLoading Cube2's texture...");
-	cube2->CubeLoadTextureBMP((char *)"elisha/elisha1.bmp", &w, &h, &cube2data1);
+	cube2->CubeLoadTextureBMP((char *)"images/elisha/elisha1.bmp", &w, &h, &cube2data1);
 	cube2->CubeSetFaceTexBuf(FRONT_FACE, cube2data1, w, h);
 
-	cube2->CubeLoadTextureBMP((char *)"elisha/elisha2.bmp", &w, &h, &cube2data2);
+	cube2->CubeLoadTextureBMP((char *)"images/elisha/elisha2.bmp", &w, &h, &cube2data2);
 	cube2->CubeSetFaceTexBuf(BACK_FACE, cube2data2, w, h);
 	
-	cube2->CubeLoadTextureBMP((char *)"elisha/elisha3.bmp", &w, &h, &cube2data3);
+	cube2->CubeLoadTextureBMP((char *)"images/elisha/elisha3.bmp", &w, &h, &cube2data3);
 	cube2->CubeSetFaceTexBuf(RIGHT_FACE, cube2data3, w, h);
 	
-	cube2->CubeLoadTextureBMP((char *)"elisha/elisha4.bmp", &w, &h, &cube2data4);
+	cube2->CubeLoadTextureBMP((char *)"images/elisha/elisha4.bmp", &w, &h, &cube2data4);
 	cube2->CubeSetFaceTexBuf(LEFT_FACE, cube2data4, w, h);
 	
-	cube2->CubeLoadTextureBMP((char *)"elisha/elisha5.bmp", &w, &h, &cube2data5);
+	cube2->CubeLoadTextureBMP((char *)"images/elisha/elisha5.bmp", &w, &h, &cube2data5);
 	cube2->CubeSetFaceTexBuf(TOP_FACE, cube2data5, w, h);
 	
-	cube2->CubeLoadTextureBMP((char *)"elisha/elisha6.bmp", &w, &h, &cube2data6);
+	cube2->CubeLoadTextureBMP((char *)"images/elisha/elisha6.bmp", &w, &h, &cube2data6);
 	cube2->CubeSetFaceTexBuf(BOTTOM_FACE, cube2data6, w, h);
 
 	printf ("OK\n");
 	
 	
 	printf ("\nLoading Cube3's texture...");
-	cube3->CubeLoadTextureBMP((char *)"eva/eva1.bmp", &w, &h, &cube3data1);
+	cube3->CubeLoadTextureBMP((char *)"images/eva/eva1.bmp", &w, &h, &cube3data1);
 	cube3->CubeSetFaceTexBuf(FRONT_FACE, cube3data1, w, h);
 
-	cube3->CubeLoadTextureBMP((char *)"eva/eva2.bmp", &w, &h, &cube3data2);
+	cube3->CubeLoadTextureBMP((char *)"images/eva/eva2.bmp", &w, &h, &cube3data2);
 	cube3->CubeSetFaceTexBuf(BACK_FACE, cube3data2, w, h);
 	
-	cube3->CubeLoadTextureBMP((char *)"eva/eva3.bmp", &w, &h, &cube3data3);
+	cube3->CubeLoadTextureBMP((char *)"images/eva/eva3.bmp", &w, &h, &cube3data3);
 	cube3->CubeSetFaceTexBuf(RIGHT_FACE, cube3data3, w, h);
 	
-	cube3->CubeLoadTextureBMP((char *)"eva/eva4.bmp", &w, &h, &cube3data4);
+	cube3->CubeLoadTextureBMP((char *)"images/eva/eva4.bmp", &w, &h, &cube3data4);
 	cube3->CubeSetFaceTexBuf(LEFT_FACE, cube3data4, w, h);
 	
-	cube3->CubeLoadTextureBMP((char *)"eva/eva5.bmp", &w, &h, &cube3data5);
+	cube3->CubeLoadTextureBMP((char *)"images/eva/eva5.bmp", &w, &h, &cube3data5);
 	cube3->CubeSetFaceTexBuf(TOP_FACE, cube3data5, w, h);
 	
-	cube3->CubeLoadTextureBMP((char *)"eva/eva6.bmp", &w, &h, &cube3data6);
+	cube3->CubeLoadTextureBMP((char *)"images/eva/eva6.bmp", &w, &h, &cube3data6);
 	cube3->CubeSetFaceTexBuf(BOTTOM_FACE, cube3data6, w, h);
 
 	printf ("OK\n");
 	
 	
 	printf ("\nLoading Cube4's texture...");
-	cube4->CubeLoadTextureBMP((char *)"evangeline/eva1.bmp", &w, &h, &cube4data1);
+	cube4->CubeLoadTextureBMP((char *)"images/evangeline/eva1.bmp", &w, &h, &cube4data1);
 	cube4->CubeSetFaceTexBuf(FRONT_FACE, cube4data1, w, h);
 
-	cube4->CubeLoadTextureBMP((char *)"evangeline/eva2.bmp", &w, &h, &cube4data2);
+	cube4->CubeLoadTextureBMP((char *)"images/evangeline/eva2.bmp", &w, &h, &cube4data2);
 	cube4->CubeSetFaceTexBuf(BACK_FACE, cube4data2, w, h);
 	
-	cube4->CubeLoadTextureBMP((char *)"evangeline/eva3.bmp", &w, &h, &cube4data3);
+	cube4->CubeLoadTextureBMP((char *)"images/evangeline/eva3.bmp", &w, &h, &cube4data3);
 	cube4->CubeSetFaceTexBuf(RIGHT_FACE, cube4data3, w, h);
 	
-	cube4->CubeLoadTextureBMP((char *)"evangeline/eva4.bmp", &w, &h, &cube4data4);
+	cube4->CubeLoadTextureBMP((char *)"images/evangeline/eva4.bmp", &w, &h, &cube4data4);
 	cube4->CubeSetFaceTexBuf(LEFT_FACE, cube4data4, w, h);
 	
-	cube4->CubeLoadTextureBMP((char *)"evangeline/eva5.bmp", &w, &h, &cube4data5);
+	cube4->CubeLoadTextureBMP((char *)"images/evangeline/eva5.bmp", &w, &h, &cube4data5);
 	cube4->CubeSetFaceTexBuf(TOP_FACE, cube4data5, w, h);
 	
-	cube4->CubeLoadTextureBMP((char *)"evangeline/eva6.bmp", &w, &h, &cube4data6);
+	cube4->CubeLoadTextureBMP((char *)"images/evangeline/eva6.bmp", &w, &h, &cube4data6);
 	cube4->CubeSetFaceTexBuf(BOTTOM_FACE, cube4data6, w, h);
 	
 	printf ("OK\n");
 	
 	
 	printf ("\nLoading Cube5's texture...");
-	cube5->CubeLoadTextureBMP((char *)"grazi/grazi1.bmp", &w, &h, &cube5data1);
+	cube5->CubeLoadTextureBMP((char *)"images/grazi/grazi1.bmp", &w, &h, &cube5data1);
 	cube5->CubeSetFaceTexBuf(FRONT_FACE, cube5data1, w, h);
 
-	cube5->CubeLoadTextureBMP((char *)"grazi/grazi2.bmp", &w, &h, &cube5data2);
+	cube5->CubeLoadTextureBMP((char *)"images/grazi/grazi2.bmp", &w, &h, &cube5data2);
 	cube5->CubeSetFaceTexBuf(BACK_FACE, cube5data2, w, h);
 	
-	cube5->CubeLoadTextureBMP((char *)"grazi/grazi3.bmp", &w, &h, &cube5data3);
+	cube5->CubeLoadTextureBMP((char *)"images/grazi/grazi3.bmp", &w, &h, &cube5data3);
 	cube5->CubeSetFaceTexBuf(RIGHT_FACE, cube5data3, w, h);
 	
-	cube5->CubeLoadTextureBMP((char *)"grazi/grazi4.bmp", &w, &h, &cube5data4);
+	cube5->CubeLoadTextureBMP((char *)"images/grazi/grazi4.bmp", &w, &h, &cube5data4);
 	cube5->CubeSetFaceTexBuf(LEFT_FACE, cube5data4, w, h);
 	
-	cube5->CubeLoadTextureBMP((char *)"grazi/grazi5.bmp", &w, &h, &cube5data5);
+	cube5->CubeLoadTextureBMP((char *)"images/grazi/grazi5.bmp", &w, &h, &cube5data5);
 	cube5->CubeSetFaceTexBuf(TOP_FACE, cube5data5, w, h);
 	
-	cube5->CubeLoadTextureBMP((char *)"grazi/grazi6.bmp", &w, &h, &cube5data6);
+	cube5->CubeLoadTextureBMP((char *)"images/grazi/grazi6.bmp", &w, &h, &cube5data6);
 	cube5->CubeSetFaceTexBuf(BOTTOM_FACE, cube5data6, w, h);
 
 	printf ("OK\n");
 	
 
 	printf ("\nLoading Cube6's texture...");
-	cube6->CubeLoadTextureBMP((char *)"jessica/jessica1.bmp", &w, &h, &cube6data1);
+	cube6->CubeLoadTextureBMP((char *)"images/jessica/jessica1.bmp", &w, &h, &cube6data1);
 	cube6->CubeSetFaceTexBuf(FRONT_FACE, cube6data1, w, h);
 
-	cube6->CubeLoadTextureBMP((char *)"jessica/jessica2.bmp", &w, &h, &cube6data2);
+	cube6->CubeLoadTextureBMP((char *)"images/jessica/jessica2.bmp", &w, &h, &cube6data2);
 	cube6->CubeSetFaceTexBuf(BACK_FACE, cube6data2, w, h);
 	
-	cube6->CubeLoadTextureBMP((char *)"jessica/jessica3.bmp", &w, &h, &cube6data3);
+	cube6->CubeLoadTextureBMP((char *)"images/jessica/jessica3.bmp", &w, &h, &cube6data3);
 	cube6->CubeSetFaceTexBuf(RIGHT_FACE, cube6data3, w, h);
 	
-	cube6->CubeLoadTextureBMP((char *)"jessica/jessica4.bmp", &w, &h, &cube6data4);
+	cube6->CubeLoadTextureBMP((char *)"images/jessica/jessica4.bmp", &w, &h, &cube6data4);
 	cube6->CubeSetFaceTexBuf(LEFT_FACE, cube6data4, w, h);
 	
-	cube6->CubeLoadTextureBMP((char *)"jessica/jessica5.bmp", &w, &h, &cube6data5);
+	cube6->CubeLoadTextureBMP((char *)"images/jessica/jessica5.bmp", &w, &h, &cube6data5);
 	cube6->CubeSetFaceTexBuf(TOP_FACE, cube6data5, w, h);
 	
-	cube6->CubeLoadTextureBMP((char *)"jessica/jessica6.bmp", &w, &h, &cube6data6);
+	cube6->CubeLoadTextureBMP((char *)"images/jessica/jessica6.bmp", &w, &h, &cube6data6);
 	cube6->CubeSetFaceTexBuf(BOTTOM_FACE, cube6data6, w, h);
 	
 	printf ("OK\n");
 	
 	
 	printf ("\nLoading Cube7's texture...");
-	cube7->CubeLoadTextureBMP((char *)"jessicabiel/jessica1.bmp", &w, &h, &cube7data1);
+	cube7->CubeLoadTextureBMP((char *)"images/jessicabiel/jessica1.bmp", &w, &h, &cube7data1);
 	cube7->CubeSetFaceTexBuf(FRONT_FACE, cube7data1, w, h);
 
-	cube7->CubeLoadTextureBMP((char *)"jessicabiel/jessica2.bmp", &w, &h, &cube7data2);
+	cube7->CubeLoadTextureBMP((char *)"images/jessicabiel/jessica2.bmp", &w, &h, &cube7data2);
 	cube7->CubeSetFaceTexBuf(BACK_FACE, cube7data2, w, h);
 	
-	cube7->CubeLoadTextureBMP((char *)"jessicabiel/jessica3.bmp", &w, &h, &cube7data3);
+	cube7->CubeLoadTextureBMP((char *)"images/jessicabiel/jessica3.bmp", &w, &h, &cube7data3);
 	cube7->CubeSetFaceTexBuf(RIGHT_FACE, cube7data3, w, h);
 	
-	cube7->CubeLoadTextureBMP((char *)"jessicabiel/jessica4.bmp", &w, &h, &cube7data4);
+	cube7->CubeLoadTextureBMP((char *)"images/jessicabiel/jessica4.bmp", &w, &h, &cube7data4);
 	cube7->CubeSetFaceTexBuf(LEFT_FACE, cube7data4, w, h);
 	
-	cube7->CubeLoadTextureBMP((char *)"jessicabiel/jessica5.bmp", &w, &h, &cube7data5);
+	cube7->CubeLoadTextureBMP((char *)"images/jessicabiel/jessica5.bmp", &w, &h, &cube7data5);
 	cube7->CubeSetFaceTexBuf(TOP_FACE, cube7data5, w, h);
 	
-	cube7->CubeLoadTextureBMP((char *)"jessicabiel/jessica6.bmp", &w, &h, &cube7data6);
+	cube7->CubeLoadTextureBMP((char *)"images/jessicabiel/jessica6.bmp", &w, &h, &cube7data6);
 	cube7->CubeSetFaceTexBuf(BOTTOM_FACE, cube7data6, w, h);
 	
 	printf ("OK\n");
 	
 
 	printf ("\nLoading Cube8's texture...");
-	cube8->CubeLoadTextureBMP((char *)"meganfox/megan1.bmp", &w, &h, &cube8data1);
+	cube8->CubeLoadTextureBMP((char *)"images/meganfox/megan1.bmp", &w, &h, &cube8data1);
 	cube8->CubeSetFaceTexBuf(FRONT_FACE, cube8data1, w, h);
 
-	cube8->CubeLoadTextureBMP((char *)"meganfox/megan2.bmp", &w, &h, &cube8data2);
+	cube8->CubeLoadTextureBMP((char *)"images/meganfox/megan2.bmp", &w, &h, &cube8data2);
 	cube8->CubeSetFaceTexBuf(BACK_FACE, cube8data2, w, h);
 	
-	cube8->CubeLoadTextureBMP((char *)"meganfox/megan3.bmp", &w, &h, &cube8data3);
+	cube8->CubeLoadTextureBMP((char *)"images/meganfox/megan3.bmp", &w, &h, &cube8data3);
 	cube8->CubeSetFaceTexBuf(RIGHT_FACE, cube8data3, w, h);
 	
-	cube8->CubeLoadTextureBMP((char *)"meganfox/megan4.bmp", &w, &h, &cube8data4);
+	cube8->CubeLoadTextureBMP((char *)"images/meganfox/megan4.bmp", &w, &h, &cube8data4);
 	cube8->CubeSetFaceTexBuf(LEFT_FACE, cube8data4, w, h);
 	
-	cube8->CubeLoadTextureBMP((char *)"meganfox/megan5.bmp", &w, &h, &cube8data5);
+	cube8->CubeLoadTextureBMP((char *)"images/meganfox/megan5.bmp", &w, &h, &cube8data5);
 	cube8->CubeSetFaceTexBuf(TOP_FACE, cube8data5, w, h);
 	
-	cube8->CubeLoadTextureBMP((char *)"meganfox/megan6.bmp", &w, &h, &cube8data6);
+	cube8->CubeLoadTextureBMP((char *)"images/meganfox/megan6.bmp", &w, &h, &cube8data6);
 	cube8->CubeSetFaceTexBuf(BOTTOM_FACE, cube8data6, w, h);
 	
 	printf ("OK\n");
 	
 
 	printf ("\nLoading Cube9's texture...");
-	cube9->CubeLoadTextureBMP((char *)"scarlett/scarlett1.bmp", &w, &h, &cube9data1);
+	cube9->CubeLoadTextureBMP((char *)"images/scarlett/scarlett1.bmp", &w, &h, &cube9data1);
 	cube9->CubeSetFaceTexBuf(FRONT_FACE, cube9data1, w, h);
 
-	cube9->CubeLoadTextureBMP((char *)"scarlett/scarlett2.bmp", &w, &h, &cube9data2);
+	cube9->CubeLoadTextureBMP((char *)"images/scarlett/scarlett2.bmp", &w, &h, &cube9data2);
 	cube9->CubeSetFaceTexBuf(BACK_FACE, cube9data2, w, h);
 	
-	cube9->CubeLoadTextureBMP((char *)"scarlett/scarlett3.bmp", &w, &h, &cube9data3);
+	cube9->CubeLoadTextureBMP((char *)"images/scarlett/scarlett3.bmp", &w, &h, &cube9data3);
 	cube9->CubeSetFaceTexBuf(RIGHT_FACE, cube9data3, w, h);
 	
-	cube9->CubeLoadTextureBMP((char *)"scarlett/scarlett4.bmp", &w, &h, &cube9data4);
+	cube9->CubeLoadTextureBMP((char *)"images/scarlett/scarlett4.bmp", &w, &h, &cube9data4);
 	cube9->CubeSetFaceTexBuf(LEFT_FACE, cube9data4, w, h);
 	
-	cube9->CubeLoadTextureBMP((char *)"scarlett/scarlett5.bmp", &w, &h, &cube9data5);
+	cube9->CubeLoadTextureBMP((char *)"images/scarlett/scarlett5.bmp", &w, &h, &cube9data5);
 	cube9->CubeSetFaceTexBuf(TOP_FACE, cube9data5, w, h);
 	
-	cube9->CubeLoadTextureBMP((char *)"scarlett/scarlett6.bmp", &w, &h, &cube9data6);
+	cube9->CubeLoadTextureBMP((char *)"images/scarlett/scarlett6.bmp", &w, &h, &cube9data6);
 	cube9->CubeSetFaceTexBuf(BOTTOM_FACE, cube9data6, w, h);
 		
 	printf ("OK\n");
 	
 
 	printf ("\nLoading Cube10's texture...");
-	cube10->CubeLoadTextureBMP((char *)"shania/shania1.bmp", &w, &h, &cube10data1);
+	cube10->CubeLoadTextureBMP((char *)"images/shania/shania1.bmp", &w, &h, &cube10data1);
 	cube10->CubeSetFaceTexBuf(FRONT_FACE, cube10data1, w, h);
 
-	cube10->CubeLoadTextureBMP((char *)"shania/shania2.bmp", &w, &h, &cube10data2);
+	cube10->CubeLoadTextureBMP((char *)"images/shania/shania2.bmp", &w, &h, &cube10data2);
 	cube10->CubeSetFaceTexBuf(BACK_FACE, cube10data2, w, h);
 	
-	cube10->CubeLoadTextureBMP((char *)"shania/shania3.bmp", &w, &h, &cube10data3);
+	cube10->CubeLoadTextureBMP((char *)"images/shania/shania3.bmp", &w, &h, &cube10data3);
 	cube10->CubeSetFaceTexBuf(RIGHT_FACE, cube10data3, w, h);
 	
-	cube10->CubeLoadTextureBMP((char *)"shania/shania4.bmp", &w, &h, &cube10data4);
+	cube10->CubeLoadTextureBMP((char *)"images/shania/shania4.bmp", &w, &h, &cube10data4);
 	cube10->CubeSetFaceTexBuf(LEFT_FACE, cube10data4, w, h);
 	
-	cube10->CubeLoadTextureBMP((char *)"shania/shania5.bmp", &w, &h, &cube10data5);
+	cube10->CubeLoadTextureBMP((char *)"images/shania/shania5.bmp", &w, &h, &cube10data5);
 	cube10->CubeSetFaceTexBuf(TOP_FACE, cube10data5, w, h);
 	
-	cube10->CubeLoadTextureBMP((char *)"shania/shania6.bmp", &w, &h, &cube10data6);
+	cube10->CubeLoadTextureBMP((char *)"images/shania/shania6.bmp", &w, &h, &cube10data6);
 	cube10->CubeSetFaceTexBuf(BOTTOM_FACE, cube10data6, w, h);
 		
 	printf ("OK\n");

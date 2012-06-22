@@ -3,6 +3,7 @@ SRCDIR			= src
 CD			= cd
 MAKE			= make
 
+
 all: $(APPNAME)
 
 $(APPNAME): 

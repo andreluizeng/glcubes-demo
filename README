@@ -6,10 +6,20 @@ Copy the content in /bin to your rootfs folder, make sure to have the GPU librar
 CROSS-COMPILING:
 ------------
 
-1 - Open the ../src/makefile
-2 - change the rootfs path
-3 - apply the make command on root folder
+this step can be done in two ways:
 
+1) setting env. variables
+
+  a - export TOOLCHAIN=/opt/freescale/usr/local/gcc-4.4.4-glibc-2.11.1-multilib-1.0/arm-fsl-linux-gnueabi
+  b - export ROOTFS=/home/user/your_rootfs_folder
+  c - export EGL_FLAVOR=x11 (x11 based applications) or export EGL_FLAVOR=fb (fb based applications)
+  d - make
+
+2) passing as arguments
+
+  a - export TOOLCHAIN=/opt/freescale/usr/local/gcc-4.4.4-glibc-2.11.1-multilib-1.0/arm-fsl-linux-gnueabi
+  b - ./make ROOTFS=/home/user/your_rootfs_folder EGL_FLAVOR=x11 (or EGL_FLAVOR=fb)
+ 
 
 THE DEMO:
 ------------
@@ -20,7 +30,7 @@ This demos shows a simple opengl es 2.0 usage (10 cubes bouncing around the scre
 TROUBLESHOTS
 ------------
 
-Make sure to have the images in the same folder as the binary. Otherwise errors will occur. 
+Make sure to have the images in the same folder as the binary (you can find them in ../bin folder). Otherwise errors will occur. 
 
 
 AUTHOR:
