@@ -24,7 +24,7 @@ this step can be done in two ways:
 THE DEMO:
 ------------
 
-This demos shows a simple opengl es 2.0 usage (10 cubes bouncing around the screen) texturized with data from bitmap files.
+This demo shows a simple opengl es 2.0 usage (10 cubes bouncing around the screen) texturized with data from bitmap files.
 
 
 TROUBLESHOTS
