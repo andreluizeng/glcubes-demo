@@ -45,8 +45,6 @@
 #include <X11/Xlib.h>
 #endif 
 
-
-
 #define VERTEX_ARRAY	0
 #define TEXCOORD_ARRAY	1
 
@@ -65,7 +63,6 @@ class GLUtils
 		#ifdef EGL_USE_X11
 			Display 			*display;
 		#endif
-
 
 		EGLDisplay	egldisplay;
 		EGLConfig	eglconfig;

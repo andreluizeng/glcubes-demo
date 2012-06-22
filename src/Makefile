@@ -9,8 +9,6 @@ CP_FILE			= cp -rf
 TARGET_PATH_LIB 	= $(ROOTFS)/usr/lib
 TARGET_PATH_INCLUDE 	= $(ROOTFS)/usr/include
 
-
-
 # x11 flags
 ifeq ($(EGL_FLAVOR),x11)
 
@@ -33,8 +31,6 @@ else
 endif
 
 OBJECTS			= main.o glutils.o glcube.o
-
-
 
 
 first: all

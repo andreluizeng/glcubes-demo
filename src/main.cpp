@@ -127,7 +127,6 @@ int main (int argc, char **argv)
 	char *cube10data5;
 	char *cube10data6;
 
-
 	// Initializate OGLES2
 	printf ("\nInitializing OGLES2...");
 	window->GLInit ();
@@ -203,7 +202,6 @@ int main (int argc, char **argv)
 	cube1->CubeSetFaceTexBuf(BOTTOM_FACE, cube1data6, w, h);
 
 	printf ("OK\n");
-	
 
 	printf ("\nLoading Cube2's texture...");
 	cube2->CubeLoadTextureBMP((char *)"images/elisha/elisha1.bmp", &w, &h, &cube2data1);
@@ -226,7 +224,6 @@ int main (int argc, char **argv)
 
 	printf ("OK\n");
 	
-	
 	printf ("\nLoading Cube3's texture...");
 	cube3->CubeLoadTextureBMP((char *)"images/eva/eva1.bmp", &w, &h, &cube3data1);
 	cube3->CubeSetFaceTexBuf(FRONT_FACE, cube3data1, w, h);
@@ -248,8 +245,7 @@ int main (int argc, char **argv)
 
 	printf ("OK\n");
 	
-	
-	printf ("\nLoading Cube4's texture...");
+		printf ("\nLoading Cube4's texture...");
 	cube4->CubeLoadTextureBMP((char *)"images/evangeline/eva1.bmp", &w, &h, &cube4data1);
 	cube4->CubeSetFaceTexBuf(FRONT_FACE, cube4data1, w, h);
 
@@ -292,7 +288,6 @@ int main (int argc, char **argv)
 
 	printf ("OK\n");
 	
-
 	printf ("\nLoading Cube6's texture...");
 	cube6->CubeLoadTextureBMP((char *)"images/jessica/jessica1.bmp", &w, &h, &cube6data1);
 	cube6->CubeSetFaceTexBuf(FRONT_FACE, cube6data1, w, h);
@@ -313,7 +308,6 @@ int main (int argc, char **argv)
 	cube6->CubeSetFaceTexBuf(BOTTOM_FACE, cube6data6, w, h);
 	
 	printf ("OK\n");
-	
 	
 	printf ("\nLoading Cube7's texture...");
 	cube7->CubeLoadTextureBMP((char *)"images/jessicabiel/jessica1.bmp", &w, &h, &cube7data1);
@@ -336,7 +330,6 @@ int main (int argc, char **argv)
 	
 	printf ("OK\n");
 	
-
 	printf ("\nLoading Cube8's texture...");
 	cube8->CubeLoadTextureBMP((char *)"images/meganfox/megan1.bmp", &w, &h, &cube8data1);
 	cube8->CubeSetFaceTexBuf(FRONT_FACE, cube8data1, w, h);
@@ -358,7 +351,6 @@ int main (int argc, char **argv)
 	
 	printf ("OK\n");
 	
-
 	printf ("\nLoading Cube9's texture...");
 	cube9->CubeLoadTextureBMP((char *)"images/scarlett/scarlett1.bmp", &w, &h, &cube9data1);
 	cube9->CubeSetFaceTexBuf(FRONT_FACE, cube9data1, w, h);
@@ -380,7 +372,6 @@ int main (int argc, char **argv)
 		
 	printf ("OK\n");
 	
-
 	printf ("\nLoading Cube10's texture...");
 	cube10->CubeLoadTextureBMP((char *)"images/shania/shania1.bmp", &w, &h, &cube10data1);
 	cube10->CubeSetFaceTexBuf(FRONT_FACE, cube10data1, w, h);
@@ -401,7 +392,6 @@ int main (int argc, char **argv)
 	cube10->CubeSetFaceTexBuf(BOTTOM_FACE, cube10data6, w, h);
 		
 	printf ("OK\n");
-	
 	
 	window->GenPerspectiveMatrix (0.5, 1.0, -1000, 1.0, matProj);
 	cube1->CubeSetProjMatrix(matProj);
@@ -431,7 +421,6 @@ int main (int argc, char **argv)
 
 			printf("\nFrame Rate: %d FPS", frames_per_second);
 		}
-
 	}
 		
 	window->GLEnd();
@@ -639,7 +628,6 @@ void Render (void)
 	CalcCubePos (&xpos9, &ypos9, &zpos9, &speedx9, &speedy9, &speedz9, &xflag9, &yflag9, &zflag9);
 	CalcCubePos (&xpos10, &ypos10, &zpos10, &speedx10, &speedy10, &speedz10, &xflag10, &yflag10, &zflag10);
 
-
 	cube1->CubeRotate (CUBE_X_AXIS, fAngleX * 2);
 	cube1->CubeRotate (CUBE_Y_AXIS, fAngleY * 3);
 	cube1->CubeRotate (CUBE_Z_AXIS, fAngleZ * 4);
@@ -648,16 +636,13 @@ void Render (void)
 	cube2->CubeRotate (CUBE_Y_AXIS, fAngleY * 2);
 	cube2->CubeRotate (CUBE_Z_AXIS, fAngleZ * 3);
 
-
 	cube3->CubeRotate (CUBE_X_AXIS, fAngleX * 4);
 	cube3->CubeRotate (CUBE_Y_AXIS, fAngleY * 3);
 	cube3->CubeRotate (CUBE_Z_AXIS, fAngleZ * 2);
 
-
 	cube4->CubeRotate (CUBE_X_AXIS, fAngleX * 2);
 	cube4->CubeRotate (CUBE_Y_AXIS, fAngleY * 1);
 	cube4->CubeRotate (CUBE_Z_AXIS, fAngleZ * 2);
-
 
 	cube5->CubeRotate (CUBE_X_AXIS, fAngleX * 3);
 	cube5->CubeRotate (CUBE_Y_AXIS, fAngleY * 1);
@@ -682,7 +667,6 @@ void Render (void)
 	cube10->CubeRotate (CUBE_X_AXIS, fAngleX * 4);
 	cube10->CubeRotate (CUBE_Y_AXIS, fAngleY * 3);
 	cube10->CubeRotate (CUBE_Z_AXIS, fAngleZ * 2);
-
 
 	cube1->CubeMove (CUBE_X_AXIS, xpos1);
 	cube1->CubeMove (CUBE_Y_AXIS, ypos1);
@@ -798,7 +782,6 @@ void CalcCubePos (float *xpos, float *ypos, float *zpos, float *speedx, float *s
 //	if (! *zflag) *zpos+=*speedz;
 //	else *zpos-=*speedz;
 
-	
 	if (*speedx >= 0.1) *speedx-=0.01;
 	if (*speedy >= 0.1) *speedy-=0.01;
 	if (*speedz >= 0.1) *speedz-=0.01;
