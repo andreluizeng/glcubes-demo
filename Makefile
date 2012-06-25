@@ -13,9 +13,8 @@ clean:
 
 	$(CD) $(SRCDIR); \
 	$(MAKE) -f Makefile clean; 
-	
+
 distclean: clean
 
 	$(CD) $(SRCDIR); \
 	$(MAKE) -f Makefile distclean; 
-	
